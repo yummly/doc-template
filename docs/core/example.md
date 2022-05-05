@@ -5,6 +5,9 @@ layout: default
 nav_order: 2
 ---
 
+<!-- You can inject a custom script at the top of the page -->
+<script defer src="{{ site.baseurl }}/assets/js/example.js"></script>
+
 # {{ page.title }}
 {: .no_toc}
 
@@ -54,3 +57,27 @@ To exclude headings from your table of contents, use the `{: .no_toc}` tag direc
 {: .no_toc}
 
 Don't believe me? Look at the TOC at the top of the page!
+
+# Using HTML
+
+You can also use HTML in your markdown. For example, you can create buttons that copy text to your clipboard. You can even put script tags in your markdown!
+
+```md
+<script defer src="{{ site.baseurl }}/assets/js/example.js"></script>
+
+...< markdown content >...
+
+<span id="copy">Copy me!</span>
+<button class="copy-to-clipboard" id="copy">Copy to clipboard</button>
+
+<span id="too">Copy me too!</span>
+<button class="copy-to-clipboard" id="too">Copy to clipboard</button>
+
+...
+```
+
+<span id="copy">Copy me!</span>
+<button class="copy-to-clipboard" id="copy">Copy to clipboard</button>
+
+<span id="too">Copy me too!</span>
+<button class="copy-to-clipboard" id="too">Copy to clipboard</button>
